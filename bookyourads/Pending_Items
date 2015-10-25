@@ -1,0 +1,3 @@
+1. advAvailableFrom - should be the proper date from which its available - relative conversion will be done from UI
+2. advSubCategoryName - need list of subcategory name to adding icons
+3. In Login Response, the list of user shortlisted ads should come.
