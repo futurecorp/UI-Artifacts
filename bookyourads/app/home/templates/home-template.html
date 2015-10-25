@@ -1,0 +1,238 @@
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">Dashboard</h1>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<!-- /.row -->
+<div class="row hide">
+    <div class="col-lg-3 col-md-6">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col-xs-3">
+                        <i class="fa fa-comments fa-5x"></i>
+                    </div>
+                    <div class="col-xs-9 text-right">
+                        <div class="huge">26</div>
+                        <div>New Comments!</div>
+                    </div>
+                </div>
+            </div>
+            <a href="#">
+                <div class="panel-footer">
+                    <span class="pull-left">View Details</span>
+                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                    <div class="clearfix"></div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-6">
+        <div class="panel panel-green">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col-xs-3">
+                        <i class="fa fa-tasks fa-5x"></i>
+                    </div>
+                    <div class="col-xs-9 text-right">
+                        <div class="huge">12</div>
+                        <div>New Tasks!</div>
+                    </div>
+                </div>
+            </div>
+            <a href="#">
+                <div class="panel-footer">
+                    <span class="pull-left">View Details</span>
+                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                    <div class="clearfix"></div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-6">
+        <div class="panel panel-yellow">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col-xs-3">
+                        <i class="fa fa-shopping-cart fa-5x"></i>
+                    </div>
+                    <div class="col-xs-9 text-right">
+                        <div class="huge">124</div>
+                        <div>New Orders!</div>
+                    </div>
+                </div>
+            </div>
+            <a href="#">
+                <div class="panel-footer">
+                    <span class="pull-left">View Details</span>
+                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                    <div class="clearfix"></div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-6">
+        <div class="panel panel-red">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col-xs-3">
+                        <i class="fa fa-support fa-5x"></i>
+                    </div>
+                    <div class="col-xs-9 text-right">
+                        <div class="huge">13</div>
+                        <div>Support Tickets!</div>
+                    </div>
+                </div>
+            </div>
+            <a href="#">
+                <div class="panel-footer">
+                    <span class="pull-left">View Details</span>
+                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                    <div class="clearfix"></div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+<!-- /.row -->
+<div class="row">
+    <!-- col-xs-12 tabs -->
+    <div class="col-xs-12">
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs">
+            <li class="active"><a href="#all-ads" data-toggle="tab">All</a></li>
+            <li><a href="#trending-ads" data-toggle="tab">Trending</a></li>
+            <li><a href="#hot-ads" data-toggle="tab">HOT</a></li>
+            <li><a href="#justin-ads" data-toggle="tab">Just In</a></li>
+            <li><a href="#comingsoon-ads" data-toggle="tab">Coming Soon</a></li>
+        </ul>
+        <section class="view-change">
+            View By: 
+            <a class="active" href="#"><i class="fa fa-th-large fa-lg"></i></a>
+            <a href="#"><i class="fa fa-map-marker fa-lg"></i></a>
+        </section>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div class="tab-pane fade in active" id="all-ads">
+                <article class="col-xs-3 ad-tilee" ng-repeat="ads in adList">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <i class="fa fa-2x" ng-class="addIcon(ads)"></i> <span class="label ellipsis" title="{{ads.advTitle}}">{{ads.advTitle}}</span> <span class="pull-right">available <br> now</span>
+                        </div>
+                        <div class="panel-body">
+                            <p>
+                                <img class="thumbnail" src="assets/imgs/bus.jpg" />
+                                <span class="caption">{{ads.advDescription}}</span>
+                            </p>
+                            <a class="shortlist" href="#"><i class="fa fa-thumbs-up"></i> Shortlist this AD</a>
+                            <div class="pull-right">
+                                <button type="button" class="btn btn-primary">Book this</button>
+                            </div>
+                        </div>
+                        <div class="panel-footer clearfix text-center">
+                            <span class="pull-left"><strong>Avg Views</strong><br> {{ads.advMaxViewsPerDay}} per day</span>
+                            <span class="pull-right"><strong>Price</strong><br> <i class="fa fa-inr"></i>{{ads.advSellerPrice}} pm</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="tab-pane fade" id="trending-ads">
+                <article class="col-xs-3 ad-tilee">
+                    <div class="panel panel-success">
+                        <div class="panel-heading">
+                            <i class="fa fa-2x fa-desktop"></i> <span class="label">A-012345</span> <span class="pull-right">available <br> now</span>
+                        </div>
+                        <div class="panel-body">
+                            <p>
+                                <img class="thumbnail" src="assets/imgs/billboard-sample2.jpg" />
+                                <span class="caption">Billboard on Mysore Bangalore Highway</span>
+                            </p>
+                            <a class="shortlist" href="#"><i class="fa fa-thumbs-up"></i> Shortlist this AD</a>
+                            <div class="pull-right">
+                                <button type="button" class="btn btn-primary">Book this</button>
+                            </div>
+                        </div>
+                        <div class="panel-footer clearfix text-center">
+                            <span class="pull-left"><strong>Avg Views</strong><br> 1300 per day</span>
+                            <span class="pull-right"><strong>Price</strong><br> <i class="fa fa-inr"></i>12,000 pm</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="tab-pane fade" id="hot-ads">
+                <article class="col-xs-3 ad-tilee">
+                    <div class="panel panel-yellow">
+                        <div class="panel-heading">
+                            <i class="fa fa-2x fa-desktop"></i> <span class="label">A-012345</span> <span class="pull-right">available <br> now</span>
+                        </div>
+                        <div class="panel-body">
+                            <p>
+                                <img class="thumbnail" src="assets/imgs/billboard-sample.jpg" />
+                                <span class="caption">Billboard on Mysore Bangalore Highway</span>
+                            </p>
+                            <a class="shortlist" href="#"><i class="fa fa-thumbs-up"></i> Shortlist this AD</a>
+                            <div class="pull-right">
+                                <button type="button" class="btn btn-primary">Book this</button>
+                            </div>
+                        </div>
+                        <div class="panel-footer clearfix text-center">
+                            <span class="pull-left"><strong>Avg Views</strong><br> 1300 per day</span>
+                            <span class="pull-right"><strong>Price</strong><br> <i class="fa fa-inr"></i>12,000 pm</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="tab-pane fade" id="justin-ads">
+                <article class="col-xs-3 ad-tilee">
+                    <div class="panel panel-green">
+                        <div class="panel-heading">
+                            <i class="fa fa-2x fa-bus"></i> <span class="label">A-012345</span> <span class="pull-right">available <br> now</span>
+                        </div>
+                        <div class="panel-body">
+                            <p>
+                                <img class="thumbnail" src="assets/imgs/bus2.jpg" />
+                                <span class="caption">Billboard on Mysore Bangalore Highway</span>
+                            </p>
+                            <a class="shortlist" href="#"><i class="fa fa-thumbs-up"></i> Shortlist this AD</a>
+                            <div class="pull-right">
+                                <button type="button" class="btn btn-primary">Book this</button>
+                            </div>
+                        </div>
+                        <div class="panel-footer clearfix text-center">
+                            <span class="pull-left"><strong>Avg Views</strong><br> 1300 per day</span>
+                            <span class="pull-right"><strong>Price</strong><br> <i class="fa fa-inr"></i>12,000 pm</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="tab-pane fade" id="comingsoon-ads">
+                <article class="col-xs-3 ad-tilee">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <i class="fa fa-2x fa-desktop"></i> <span class="label">A-012345</span> <span class="pull-right">available <br> in a week</span>
+                        </div>
+                        <div class="panel-body">
+                            <p>
+                                <img class="thumbnail" src="assets/imgs/billboard-sample3.jpeg" />
+                                <span class="caption">Billboard on Mysore Bangalore Highway</span>
+                            </p>
+                            <a class="shortlist" href="#"><i class="fa fa-thumbs-up"></i> Shortlist this AD</a>
+                            <div class="pull-right">
+                                <button type="button" class="btn btn-primary">Book this</button>
+                            </div>
+                        </div>
+                        <div class="panel-footer clearfix text-center">
+                            <span class="pull-left"><strong>Avg Views</strong><br> 1300 per day</span>
+                            <span class="pull-right"><strong>Price</strong><br> <i class="fa fa-inr"></i>12,000 pm</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+        <!-- /.Nav tabs -->
+    </div>
+    <!-- /.col-xs-12 tabs -->
+</div>
+<!-- /.row -->
