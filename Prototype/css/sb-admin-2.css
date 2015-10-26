@@ -376,3 +376,9 @@ table.dataTable thead .sorting:after {
 .view-change a.active{ border:1px solid #666; border-radius:3px; }
 .shortlist{ line-height:3em; color:#337ab7; }
 .shortlist:hover{ color:#23527c; }
+
+
+.margin-top-10{ margin-top:10px; }
+.input-group.padding-left-0{ padding-left:15px; }
+.margin-top-0{ margin-top:0; }
+.margin-bottom-15{ margin-bottom:15px; }
